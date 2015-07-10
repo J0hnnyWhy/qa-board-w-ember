@@ -5,6 +5,7 @@
   </title>
 
   <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/styles.css">
 
   <script src="libs/jquery-1.11.1.js"></script>
   <script src="libs/ember-template-compiler-1.10.0.js"></script>
@@ -19,17 +20,19 @@
 
   <script src="routes/questions.js"></script>
   <script src="routes/question.js"></script>
+  <script src="routes/new-answer.js"></script>
 
    <script src="controllers/question.js"></script>
    <script src="controllers/new-question.js"></script>
     <script src="controllers/new-answer.js"></script>
+     <script src="controllers/answer.js"></script>
 
    <script src="models/question.js"></script>
    <script src="models/answer.js"></script>
 
   <script>
     EmberHandlebarsLoader.loadTemplates([
-      'application', 'questions', 'new-question', 'question', 'new-answer'
+      'application', 'questions', 'new-question', 'question', 'new-answer', 'about'
     ]);
   </script>
 
