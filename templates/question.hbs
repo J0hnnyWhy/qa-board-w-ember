@@ -3,33 +3,33 @@
 {{#if isEditing}}
   <form>
     <div class="form-group">
-      <label for="title">Title</label>
+      <label for="title">Question</label>
       {{input value=title id="title" class="form-control"}}
     </div>
 
     <div class="form-group">
-      <label for="body">Body</label>
-      {{textarea value=body id="body" class="form-control" rows="15"}}
+      <label for="author">Author</label>
+      {{input value=author id="author" class="form-control"}}
     </div>
 
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
   </form>
 {{else}}
-  <p>{{body}}</p>
+  <p>{{author}}</p>
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 {{/if}}
 
 {{outlet}}
 
-<h2>Comments</h2>
+<h2>Answers</h2>
 
-{{#each comment in comments itemController="comment"}}
+{{#each answer in answers itemController="answer"}}
   <p>
-    {{comment.text}}
-    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+    {{answer.text}}
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete answer</button>
   </p>
 {{/each}}
 
-<p>{{#link-to 'new-comment' this class="btn btn-success"}}New comment{{/link-to}}</p>
-<button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+<p>{{#link-to 'new-answer' this class="btn btn-success"}}New answer{{/link-to}}</p>
+<button class="btn btn-xs btn-danger" {{action 'delete'}}>delete question</button>
