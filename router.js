@@ -1,2 +1,3 @@
-Blogger.Router.map(function() {
-  this.resource('posts', {path: '/'});
+Qaboard.Router.map(function() {
+  this.resource('questions', {path: '/'});
+});
